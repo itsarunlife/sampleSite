@@ -1,0 +1,378 @@
+:root {
+  --surfie: #007B77;
+  --ocean: #52BEBB;
+  --mint: #EAF4F3;
+  --neutral: #F9F9F6;
+  --black: #0E0E0E;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--neutral);
+  color: var(--black);
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   NAVIGATION (FINAL)
+========================= */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(249, 249, 246, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav.scrolled {
+  height: 64px;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  transition: height 0.3s ease;
+}
+
+.nav.scrolled .nav-inner {
+  height: 64px;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  height: 48px;
+}
+
+.brand span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Hover underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--surfie);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* CTA */
+.nav-cta {
+  padding: 8px 18px;
+  border: 1px solid var(--surfie);
+  border-radius: 20px;
+  color: var(--surfie);
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--surfie);
+  color: white;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 119, 0.85),
+    rgba(82, 190, 187, 0.75)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 0 60px;
+  animation: heroIn 1.2s ease;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62px;
+  line-height: 1.05;
+  margin: 24px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 520px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 42px;
+  background: white;
+  color: var(--surfie);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 120px 0;
+}
+
+.section.soft {
+  background: white;
+}
+
+.gradient-section {
+  background: linear-gradient(160deg, var(--surfie), var(--ocean));
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+
+.large {
+  font-size: 19px;
+  max-width: 640px;
+}
+
+/* ABOUT */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 50px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+  transition: transform .4s ease;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card span {
+  display: block;
+  padding: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* EXPORT */
+.export-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.export-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.export-points {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.export-points li {
+  margin-bottom: 12px;
+}
+
+/* CONTACT */
+.contact form {
+  max-width: 480px;
+  margin-top: 40px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact button {
+  background: var(--surfie);
+  color: white;
+  padding: 14px 36px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+  background: var(--black);
+  color: white;
+}
+
+/* ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .about-layout,
+  .export-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 0 28px;
+  }
+}

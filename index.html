@@ -1,174 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Zphyr Vogue Pvt Ltd | Garment Manufacturer & Exporter</title>
-  <meta name="description" content="Zphyr Vogue Pvt Ltd – Premium garment manufacturing and export partner for global brands." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description for SEO here.">
+    <meta property="og:title" content="Page Title for Social Sharing">
+    <meta property="og:description" content="Description for social sharing.">
+    <meta property="og:image" content="URL_to_image">
+    <meta property="og:url" content="Current_URL_here">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add your CSS and JavaScript files accordingly -->
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- NAV -->
-<header class="nav">
-  <div class="container nav-inner">
-      <div class="brand">
-        <img src="images/logo.svg" alt="Zphyr Vogue Pvt Ltd Logo" class="logo" />
-      </div>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#export">Exports</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+    <main>
+        <section id="section1">
+            <h1>Welcome to Sample Site</h1>
+            <p>Your content goes here.</p>
+        </section>
+        <section id="section2">
+            <h2>About Us</h2>
+            <p>Information about us.</p>
+        </section>
+        <section id="section3">
+            <h2>Contact Us</h2>
+            <p>How to reach us.</p>
+        </section>
+    </main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="eyebrow">Garment Manufacturing & Exports</span>
-    <h1>
-      Crafted for<br />
-      Global Standards
-    </h1>
-    <p>
-      Premium apparel manufacturing for brands that value precision,
-      consistency, and long-term partnerships.
-    </p>
-    <a href="#contact" class="cta">Start a Conversation</a>
-  </div>
-</section>
+    <footer>
+        <p>Copyright © 2026 Your Site</p>
+    </footer>
 
-<!-- ABOUT -->
-<section id="about" class="section reveal">
-  <div class="container about-layout">
-    <div class="about-text">
-      <h2>About Zphyr Vogue</h2>
-      <p class="large">
-        Zphyr Vogue Pvt Ltd is a modern garment manufacturing company built
-        to serve global buyers, export houses, and institutional clients.
-      </p>
-      <p>
-        Our operations are designed around disciplined production systems,
-        ethical manufacturing practices, and quality benchmarks aligned
-        with international expectations.
-      </p>
-    </div>
-    <div class="about-image">
-      <img src="images/about.jpg" alt="Modern garment manufacturing facility" loading="lazy" />
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section soft reveal">
-  <div class="container">
-    <h2>What We Do</h2>
-
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="images/service-manufacturing.jpg" alt="Garment manufacturing process" loading="lazy" />
-        <span>Garment Manufacturing</span>
-      </div>
-      <div class="service-card">
-        <img src="images/service-export.jpg" alt="Bulk and export order fulfillment" loading="lazy" />
-        <span>Bulk & Export Orders</span>
-      </div>
-      <div class="service-card">
-        <img src="images/service-label.jpg" alt="Private label clothing production" loading="lazy" />
-        <span>Private Label Production</span>
-      </div>
-      <div class="service-card">
-        <img src="images/service-uniform.jpg" alt="Uniform manufacturing" loading="lazy" />
-        <span>Uniform Manufacturing</span>
-      </div>
-      <div class="service-card">
-        <img src="images/service-oem.jpg" alt="OEM and ODM design services" loading="lazy" />
-        <span>OEM / ODM Services</span>
-      </div>
-      <div class="service-card">
-        <img src="images/service-fabric.jpg" alt="Fabric sourcing and sampling" loading="lazy" />
-        <span>Fabric Sourcing & Sampling</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPORT -->
-<section id="export" class="section reveal gradient-section">
-  <div class="container export-layout">
-    <div class="editorial dark">
-      <h2>Export & Compliance</h2>
-      <p class="large">
-        Manufacturing systems aligned with international buyer requirements
-        and export compliance standards.
-      </p>
-
-      <ul class="export-points">
-        <li>Multi-stage quality assurance</li>
-        <li>Export-ready documentation</li>
-        <li>Scalable bulk capacity</li>
-        <li>Ethical & responsible practices</li>
-      </ul>
-    </div>
-    <div class="export-image">
-      <img src="images/export-section.jpg" alt="Global shipping and export logistics" loading="lazy" />
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <div class="container contact">
-    <h2>Let’s Work Together</h2>
-    <p class="large">
-      Share your requirement and our team will get back to you.
-    </p>
-
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Your Requirement" required></textarea>
-      <button type="submit">Send Enquiry</button>
-    </form>
-  </div>
-</section>
-
-<!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/917200501352?text=Hello%20Zphyr%20Vogue%2C%20I%20would%20like%20to%20discuss%20manufacturing%20requirements."
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat on WhatsApp"
->
-  <svg width="26" height="26" viewBox="0 0 32 32" fill="white">
-    <path d="M16 2.933c-7.22 0-13.067 5.847-13.067 13.067 0 2.307.6 4.467 1.653 6.347L2.8 29.067l6.88-1.787c1.8.987 3.867 1.56 6.32 1.56 7.22 0 13.067-5.847 13.067-13.067S23.22 2.933 16 2.933zm6.933 18.347c-.293.827-1.693 1.56-2.347 1.667-.64.107-1.467.16-2.36-.147a21.15 21.15 0 0 1-2.14-.787c-3.76-1.627-6.213-5.44-6.4-5.693-.187-.253-1.52-2.013-1.52-3.84s.96-2.72 1.307-3.093c.347-.373.747-.467.987-.467h.72c.227 0 .533-.087.827.627.307.747 1.04 2.56 1.133 2.747.093.187.147.4.027.64-.12.24-.187.387-.373.6-.187.213-.4.467-.56.627-.187.187-.387.387-.16.76.227.373.987 1.627 2.12 2.64 1.453 1.293 2.68 1.693 3.053 1.88.373.187.587.16.8-.093.213-.253.933-1.08 1.187-1.453.24-.373.493-.307.827-.187.333.12 2.133 1.013 2.493 1.2.36.187.613.267.707.427.093.16.093.907-.2 1.733z"/>
-  </svg>
-</a>
-
-<footer>
-  © 2026 Zphyr Vogue Pvt Ltd
-</footer>
-
-<script>
-  const reveals = document.querySelectorAll(".reveal");
-  window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight * 0.85) {
-        el.classList.add("active");
-      }
-    });
-  });
-</script>
-
+    <script>
+        // Smooth Scrolling functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
